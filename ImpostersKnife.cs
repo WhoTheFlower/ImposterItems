@@ -155,11 +155,33 @@ namespace ImposterItems
 
 		protected override void OnPreDrop(PlayerController user)
 		{
+			base.StopAllCoroutines();
 			if (this.m_isCurrentlyActive)
 			{
-				this.EndEffect(user);
+				if (Pixelator.Instance)
+				{
+					Pixelator.Instance.AdditionalCoreStackRenderPass = null;
+				}
+				user.specRigidbody.RemoveCollisionLayerIgnoreOverride(CollisionMask.LayerToMask(CollisionLayer.EnemyHitBox, CollisionLayer.EnemyCollider));
+				user.ChangeSpecialShaderFlag(1, 0f);
+				user.SetIsStealthed(false, "voting interface");
+				user.SetCapableOfStealing(false, "VotingInterface", null);
 			}
-			base.OnPreDrop(user);
+			user.RemoveActiveItem(this.PickupObjectId);
+			EncounterTrackable.SuppressNextNotification = true;
+			PlayerItem playerItem = Instantiate(PickupObjectDatabase.GetById(VotingInterface.VotingInterfaceId).gameObject, Vector2.zero, Quaternion.identity).GetComponent<PlayerItem>();
+			playerItem.ForceAsExtant = true;
+			playerItem.Pickup(user);
+			EncounterTrackable.SuppressNextNotification = false;
+			foreach (PlayerItem item in user.activeItems)
+			{
+				if (item is VotingInterface)
+				{
+					item.ForceApplyCooldown(user);
+					user.DropActiveItem(item);
+				}
+			}
+			Destroy(base.gameObject);
 		}
 
 		protected override void DoEffect(PlayerController user)
