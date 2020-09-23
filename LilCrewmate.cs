@@ -22,7 +22,7 @@ namespace ImposterItems
             var item = obj.AddComponent<CompanionItem>();
             ItemBuilder.AddSpriteToObject(itemName, resourceName, obj);
             string shortDesc = "Just look at him!";
-            string longDesc = "This little crewmate went with the impostor when they where both ejected off the ship.\n\nHe doesn’t talk, he doesn’t fight, he honestly doesn’t do much of anything aside from being cute. At least the company must be nice.";
+            string longDesc = "This little crewmate went with the impostor when they were both ejected off the ship.\n\nHe doesn’t talk, he doesn’t fight, he honestly doesn’t do much of anything aside from being cute. At least the company must be nice.";
             ItemBuilder.SetupItem(item, shortDesc, longDesc, "spapi");
             item.quality = PickupObject.ItemQuality.SPECIAL;
             item.CompanionGuid = "lil_crewmate";
