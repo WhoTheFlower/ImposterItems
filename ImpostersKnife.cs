@@ -13,7 +13,7 @@ namespace ImposterItems
     {
         public static void Init()
         {
-            string itemName = "Impostor's Knife";
+            string itemName = "Imposter's Knife";
             string resourceName = "ImposterItems/Resources/imposter_knife";
             GameObject obj = new GameObject(itemName);
             var item = obj.AddComponent<ImpostersKnife>();

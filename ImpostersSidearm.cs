@@ -15,7 +15,7 @@ namespace ImposterItems
             Gun gun = ETGMod.Databases.Items.NewGun("Impostor's Sidearm", "impgun");
             Game.Items.Rename("outdated_gun_mods:impostor's_sidearm", "spapi:impostors_sidearm");
             GunExt.SetShortDescription(gun, "No!! Please!");
-            GunExt.SetLongDescription(gun, "\n\nNormally locked up in the weapons cache, This gun my be responsible for countless accounts of cold blooded murder. Now why would a mere crewmate need such a bulky, powerful weapon.. " +
+            GunExt.SetLongDescription(gun, "\n\nNormally locked up in the weapons cache, This gun my be responsible for countless accounts of cold blooded murder. Now why would a mere crewmate need such a bulky, powerful weapon... " +
                 "as one fellow crewmate once stated \"That's kind of sus\"");
             GunExt.SetupSprite(gun, null, "impgun_idle_001", 12);
             GunExt.AddProjectileModuleFrom(gun, "klobb", true, false);
