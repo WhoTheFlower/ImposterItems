@@ -22,7 +22,7 @@ namespace ImposterItems
             var item = obj.AddComponent<CompanionItem>();
             ItemBuilder.AddSpriteToObject(itemName, resourceName, obj);
             string shortDesc = "Just look at him!";
-            string longDesc = "This little crewmate went with the imposter when they where both ejected off the ship.\n\nHe doesn’t talk, he doesn’t fight, he honestly doesn’t do much of anything aside from being cute. At least the company must be nice.";
+            string longDesc = "This little crewmate went with the impostor when they where both ejected off the ship.\n\nHe doesn’t talk, he doesn’t fight, he honestly doesn’t do much of anything aside from being cute. At least the company must be nice.";
             ItemBuilder.SetupItem(item, shortDesc, longDesc, "spapi");
             item.quality = PickupObject.ItemQuality.SPECIAL;
             item.CompanionGuid = "lil_crewmate";
@@ -50,7 +50,7 @@ namespace ImposterItems
                 companion.specRigidbody.PixelColliders.Add(collider);
                 companion.specRigidbody.CollideWithOthers = true;
                 companion.aiActor.CollisionDamage = 0f;
-                companion.aiActor.MovementSpeed = 5f;
+                companion.aiActor.MovementSpeed = 7.2f;
                 companion.aiActor.HitByEnemyBullets = true;
                 prefab.AddAnimation("idle_right", "ImposterItems/Resources/Crewmate/IdleRight",  5, AnimationType.Idle, DirectionType.TwoWayHorizontal);
                 prefab.AddAnimation("idle_left", "ImposterItems/Resources/Crewmate/IdleLeft", 5, AnimationType.Idle, DirectionType.TwoWayHorizontal);

@@ -19,7 +19,7 @@ namespace ImposterItems
             ItemBuilder.AddSpriteToObject(itemName, resourceName, obj);
             string shortDesc = "Sabotage";
             string longDesc = "Allows the user to remotely turn off the lights and slip into darkness. While the lights are dimmed gain stealth.\n\nThis tablet was issued to you and the rest of your crew in tact with multiple apps, most notably ones " +
-                "allowing you to anomalously vote in crew meetings, view your surroundings, and remotely control linked electronics. Luckily The Gungeon doesn't have a great firewall...";
+                "allowing you to anomalously vote in crew meetings, view your surroundings, and remotely control linked electronics. Luckily The Gungeon doesn't have a great firewall... \n\nWhen in doubt, say pink vented.";
             ItemBuilder.SetupItem(item, shortDesc, longDesc, "spapi");
             ItemBuilder.SetCooldownType(item, ItemBuilder.CooldownType.Damage, 500);
             item.consumable = false;
