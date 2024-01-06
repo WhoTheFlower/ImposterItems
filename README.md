@@ -1,2 +1,2 @@
-# ImposterItems
- The custom item pack for The Imposter custom character.
+# Imposter Items
+ A Custom Pack for The Imposter Custom Character in Enter The Gungeon
